@@ -41,7 +41,7 @@ console.log(price); */
 // 'Посылка будет отправлена сегодня'
 // 'Вам перезвнит менеджер'
 
-const option = 3;
+/* const option = 3;
 let message;
 
 switch(option) {
@@ -61,4 +61,42 @@ switch(option) {
         message = 'Вам перезвонит менеджер';
 }
 
-console.log(message);
+console.log(message); */
+
+/* let counter = 0;
+
+while (counter < 10) {
+console.log("counter: ", counter);
+counter += 1;
+ 
+} */
+
+/* let clientCounter = 18;
+const maxClients = 25;
+
+while (clientCounter < maxClients) {
+  console.log(clientCounter);
+  clientCounter += 1;
+} */
+
+/* for (let i = 0; i <= 5; i += 1) {
+    console.log(i);
+  
+    if (i === 3) {
+      console.log("Нашли число 3, прерываем выполнение цикла");
+ break;
+    }
+  }
+  
+  console.log("Лог после цикла"); */
+
+/*   const number = 10;
+
+for (let i = 0; i < number; i += 1) {
+  if (i % 2 === 0) {
+    continue;
+  }
+
+  console.log("Нечетное i: ", i); // 1, 3, 5, 7, 9
+} */
+
