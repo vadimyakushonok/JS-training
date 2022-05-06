@@ -508,13 +508,240 @@ const {
  //TASK 26
 
  // Change code below this line
-function calculateMeanTemperature(forecast) {
-  const todayLow = forecast.today.low;
-  const todayHigh = forecast.today.high;
-  const tomorrowLow = forecast.tomorrow.low;
-  const tomorrowHigh = forecast.tomorrow.high;
+/* function calculateMeanTemperature(forecast) {
+
+const {
+  today: {  low: todayLow, high: todayHigh },
+  tomorrow: {low: tomorrowLow, high: tomorrowHigh},
+} = forecast;
 
   // Change code above this line
   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 }
+
+console.log(calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }));
+console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} })); */
+
+// TASK 27
+
+/* const scores = [89, 64, 42, 17, 93, 51, 26];
+// Change code below this line
+const bestScore = Math.max(...scores);
+const worstScore = Math.min(...scores);
+
+console.log(bestScore);
+console.log(worstScore); */
+
+//TASK 28
+
+/* const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
+// Change code below this line
+const allScores = [...firstGroupScores, ...secondGroupScores, ... thirdGroupScores];
+const bestScore = Math.max(...allScores);
+const worstScore = Math.min(...allScores); */
+
+//TASK 29
+
+/* const defaultSettings = {
+  theme: "light",
+  public: true,
+  withPassword: false,
+  minNumberOfQuestions: 10,
+  timePerQuestion: 60,
+};
+const overrideSettings = {
+  public: false,
+  withPassword: true,
+  timePerQuestion: 30,
+};
+// Change code below this line
+const finalSettings = {...defaultSettings, ...overrideSettings};
+ */
+
+//TASK 30
+
+/* function makeTask(data) {
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  // Change code below this line
+
+return {category, priority, ...data, completed};
+  // Change code above this line
+}
+
+console.log(makeTask({}));
+console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+console.log(makeTask({ category: "Finance", text: "Take interest" }));
+console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+console.log(makeTask({ text: "Buy bread" })); */
+
+//TASK 31
+
+// Change code below this line
+/* function add(...args) {
+  let total = 0;
+for(const el of args) {
+  total += el;
+}
+  return total;
+  // Change code above this line
+}
+
+console.log(add(15, 27));
+console.log(add(12, 4, 11, 48));
+console.log(add(32, 6, 13, 19, 8));
+console.log(add(74, 11, 62, 46, 12, 36)); */
+
+//TASK 32
+
+// Change code below this line
+/* function addOverNum(number, ...args) {
+  let total = 0;
+
+  for (const arg of args) {
+    if (arg > number) {
+      total += arg;
+    }
+  }
+
+  return total;
+  // Change code above this line
+}
+
+console.log(addOverNum(50, 15, 27));
+console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+console.log(addOverNum(15, 32, 6, 13, 19, 8));
+console.log(addOverNum(20, 74, 11, 62, 46, 12, 36)); */
+
+//TASK 33
+
+// Change code below this line
+/* function findMatches(args1, ...args2) {
+  const matches = []; // Don't change this line
+for (const el of args2) {
+  if (args1.includes(el)) {
+    matches.push(el)
+  }
+}
+  // Change code above this line
+  return matches;
+}
+
+console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+console.log(findMatches([63, 11, 8, 29], 4, 7, 16)); */
+
+//TASK 34 
+
+/* const bookShelf = {
+  // Change code below this line
+  books: ["The last kingdom", "The guardian of dreams"],
+  getBooks() {
+    return "Returning all books";
+  },
+  addBook(bookName) {
+    return `Adding book ${bookName}`;
+  },
+  removeBook(bookName) {
+    return `Deleting book ${bookName}`;
+  },
+  updateBook(oldName, newName) {
+    return `Updating book ${oldName} to ${newName}`;
+  },
+
+  // Change code above this line
+}; */
+
+// TASK 35
+
+/* const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    // Change code below this line
+    this.books.splice(this.books.indexOf(oldName), 1, newName);
+    
+    return this;
+
+    // Change code above this line
+  },
+};
+
+console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+console.log(bookShelf.updateBook("The last kingdom", "Dune")); */
+
+// TASK 36 - 39
+
+/* const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  removePotion(potionName) {
+    // Change code below this line
+
+    this.potions.splice(this.potions.indexOf(potionName), 1);
+    return this.potions;
+
+
+    // Change code above this line
+  },
+}; */
+
+// TASK 40
+
+/* const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  updatePotionName(oldName, newName) {
+    // Change code below this line
+this.potions.splice(this.potions.indexOf(oldName), 1, newName);
+
+return this.potions;
+
+    // Change code above this line
+  },
+}; */
+
+//TASK 41
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+
+      if (this.potions.name === newPotion.name) {
+      return `Error! Potion ${newPotion} is already in your inventory!`;
+    }
+
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
+};
+
+console.log(atTheOldToad.getPotions())
+console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 520 }));
 
