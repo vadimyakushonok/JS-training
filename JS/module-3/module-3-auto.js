@@ -711,37 +711,75 @@ const atTheOldToad = {
   ],
   // Change code below this line
   getPotions() {
-    return this.potions;
+
+    const {potions} = this;
+    return potions;
   },
+
   addPotion(newPotion) {
 
-      if (this.potions.name === newPotion.name) {
-      return `Error! Potion ${newPotion} is already in your inventory!`;
-    }
+  const {potions} = this;
 
-    this.potions.push(newPotion);
+  for (const item of potions) {
+
+      if (item.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+  }
+
+ potions.push(newPotion);
+ return potions;
+     
   },
+
   removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
 
-    if (potionIndex === -1) {
-      return `Potion ${potionName} is not in inventory!`;
+  const {potions} = this;
+
+  for (let i = 0; i < potions.length; i +=1) {
+    const {name} = potions[i];
+
+    if (potionName === name) {
+      potions.splice(i, 1);
+      return potions;
     }
-
-    this.potions.splice(potionIndex, 1);
+  }
+ 
+  return `Potion ${potionName} is not in inventory!`;
   },
+
   updatePotionName(oldName, newName) {
-    const potionIndex = this.potions.indexOf(oldName);
 
-    if (potionIndex === -1) {
-      return `Potion ${oldName} is not in inventory!`;
+    const {potions} = this;
+
+    for (const item of potions) {
+      if (oldName === item.name) {
+       item.name = newName;
+       return potions;
+      }
     }
+  
+    
+    return `Potion ${oldName} is not in inventory!`;
+    },
 
-    this.potions.splice(potionIndex, 1, newName);
-  },
+
   // Change code above this line
 };
 
 console.log(atTheOldToad.getPotions())
 console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 520 }));
+console.log(atTheOldToad.removePotion('Sped potion'));
+console.log(atTheOldToad.updatePotionName("Draon breath", "Polymorth"));
 
+/* function greet(name) {
+  console.log(`Добро пожаловать ${name}.`);
+}
+
+// Функция высшего порядка
+function registerGuest(name, callback) {
+  console.log(`Регистрируем гостя ${name}.`);
+  callback(name);
+}
+ */
+/* registerGuest("Манго", greet); */
