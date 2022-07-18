@@ -1,0 +1,29 @@
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 25px;
+    background: #ff9900;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.title-list {
+    color: blue;
+    text-decoration: none;
+    padding-top: 25px;
+}
+
+.title-list:hover {
+    color: tomato;
+}
+
+.title-list-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.title-list-link:hover {
+    color: tomato;
+}
