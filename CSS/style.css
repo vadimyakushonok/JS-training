@@ -1,4 +1,4 @@
-button {
+.head-btn {
     border: none;
     border-radius: 7px;
     padding: 10px 25px;
@@ -26,4 +26,24 @@ button {
 
 .title-list-link:hover {
     color: tomato;
+}
+
+.section-module-7 {
+    margin-top: 50px;
+}
+
+.add-btn {
+    margin-bottom: 20px;
+}
+
+.js-container-module-7 {
+    outline: 2px solid tomato;
+}
+
+.btn-task-1 {
+    margin-right: 15px;
+}
+
+.list-task-2 {
+    
 }
