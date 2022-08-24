@@ -45,5 +45,35 @@
 }
 
 .list-task-2 {
-    
+    list-style-type: none;
+    display: flex;
+}
+
+.list-item-task-2 {
+    margin-right: 15px;
+}
+
+.btn-task-2-active {
+    color: white;
+    background-color: blue;
+}
+
+.containerTask3 {
+display: flex;
+}
+
+.color-card {
+outline: 2px solid black;
+width: 150px;
+margin: 5px;
+padding: 5px;
+}
+
+.color-swatch {
+    height: 150px;
+    width: 150px;
+}
+
+.color-meta {
+    width: 150px;
 }

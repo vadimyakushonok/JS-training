@@ -1,16 +1,21 @@
-const fontSizeControl = document.getElementById('font-size-control');
-const textEl = document.getElementById('text');
+const fontSizeConrol = document.getElementById('font-size-control');
+const spanText = document.getElementById('text');
+
+console.log(fontSizeConrol);
+console.log(spanText);
 
 
-fontSizeControl.addEventListener('input', onSizeControlInput);
+fontSizeConrol.addEventListener('input', onChangeFontsizeSpanText);
 
-function onSizeControlInput(evt) {
-    if(evt.currentTarget.value) {
-        textEl.style.fontSize = `${evt.currentTarget.value}px`;
-        console.log(evt.currentTarget.value);
-    }
+function onChangeFontsizeSpanText(e) {
+
+    spanText.style.fontSize = `${e.target.value}px`;
+    console.log(e.target.value);
+
+   /*  if(e.currentTarget.value) {
+        spanText.style.fontSize = `${e.currentTarget.value}px`;
+    } */
 }
-
 
 
 
