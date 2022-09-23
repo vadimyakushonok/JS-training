@@ -1,0 +1,24 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "npm-training",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node-tut/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadimyakushonok/JS-training.git"
+  },
+  "author": "Vadim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vadimyakushonok/JS-training/issues"
+  },
+  "homepage": "https://github.com/vadimyakushonok/JS-training#readme",
+  "dependencies": {
+    "joi": "^17.6.0",
+    "lodash.throttle": "^4.1.1",
+    "validator": "^13.7.0"
+  }
+}
